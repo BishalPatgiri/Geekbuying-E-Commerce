@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/new.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Bestsellers</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="main_content">
+        <div id="heading"><h1>Bestselling</h1></div>
+        <div id="master_content">
+            <div id="categories">
+                <div id="categories_item">
+                    <h3 id="catg">All Categories</h3>
+                    <details class="drop">
+                        <summary>Smart Home & Garden</summary>
+                        <uL>
+                            <li>Robot Vacuum Cleaner</li>
+                            <li>Cordless Vacuum Cleaners</li>
+                            <li>Ceiling Lights</li>
+                            <li>Hair Care & Salon</li>
+                            <li>Clocks</li>
+                            <li>Bakeware</li>
+                            <li>Furniture</li>
+                            <li>Tableware</li>
+                            <li>Kitchen Appliances</li>
+                            <li>Personal Care</li>
+                            <li>LED Outdoor Lights</li>
+                            <li>Robot Vacuum Cleaner Accessories</li>
+                            <li>Cordless Vacuum Cleaner Accessories</li>
+                            <li>Others</li>
+                            <li>Night Light</li>
+                            <li>Cosmetics</li>
+                            <li>Light Gadgets</li>
+                            <li>Dog Supplies</li>
+                            <li>Cat Supplies</li>
+                            <li>Other Pet Supplies</li>
+                        </uL>
+                    </details >
+                        <details class="drop">
+                            <summary>Consumer Electronics</summary>
+                            <uL>
+                                <li>Earbud Headphones</li>
+                                <li>FDM 3D Printers</li>
+                                <li>Laser Engraved & Cutters</li>
+                                <li>3D Printer Accessories</li>
+                                <li>Projectors</li>
+                                <li>Accessories</li>
+                                <li>Measurement and Analysis Instrument</li>
+                                <li>Power Banks</li>
+                                <li>Camera & Camrecorder</li>
+                                <li>Other Accessories</li>
+                              
+                            </uL>
+                        </details>
+                        <details class="drop">
+                            <summary>Sports & Outdoors</summary>
+                            <uL>
+                                <li>Outdoor Generator & Portable Power</li>
+                                <li>Water Sports</li>
+                                <li>Survival & Emergency Gear</li>
+                                <li>Tent & Hammock</li>
+                                <li>Sports & Action Cameras</li>
+                                <li>Other Outdoor Gears</li>
+                                <li>Bikes</li>
+                                <li>travel Supplies</li>
+                                <li>Bike Bags</li>
+                                <li>Other Accessories</li>
+                                <li>Basketball</li>
+                                <li>Soccer</li>
+                            </uL>
+                        </details>
+                        <details class="drop">
+                            <summary>Toy & Hobbies</summary>
+                            <uL>
+                                <li>RC Quadcopters</li>
+                                <li>RC Boats</li>
+                                <li>RC cars</li>
+                                <li>FPV System</li>
+                                <li>RC Helicopter</li>
+                                <li>RC Boat Parts</li>
+                                <li>Building Sets & Blocks</li>
+                                <li>Trampoline</li>
+                            </uL>
+                        </details>
+        
+                        <details class="drop">
+                            <summary>Automobiles & Motorcycles</summary>
+                            <uL>
+                                <li>Other Gadgets</li>
+                                <li>Car Repairs & Maintenance</li>
+                                <li>Garage Equipment & Tools</li>
+                              
+                            </uL>
+                        </details>
+                        <details class="drop">
+                            <summary>Wearable Devices</summary>
+                            <uL>
+                                <li>Smart Watches</li>
+                                <li>Smart Bracelets</li>
+                            
+                              
+                            </uL>
+                        </details>
+                   
+                    <details class="drop">
+                        <summary>TV Boxes & Mini PCs</summary>
+                        <uL>
+                            <li>Android TV Boxes</li>
+                            <li>Window Mini PCs</li>
+                        
+                          
+                        </uL>
+                    </details>
+                    <details class="drop">
+                        <summary>Security System</summary>
+                        <uL>
+                            <li>IP Cameras</li>
+                            <li>Video Door Phones</li>
+                        
+                          
+                        </uL>
+                    </details>
+                    <details class="drop">
+                        <summary>Phones & Accessories</summary>
+                        <uL>
+                            <li>5G Smartphones</li>
+                            <li>iPhones Accessories</li>
+                        
+                          
+                        </uL>
+                    </details>
+                    <details class="drop">
+                        <summary>Computers, Tablet & Accessories</summary>
+                        <uL>
+                            <li>Android Tablet</li>
+                            <li>Gaming Laptop</li>
+                            <li>Monitors</li>
+                        
+                          
+                        </uL>
+                    </details>
+                </div>
+            </div>
+            <div id="filter_item">
+                <div id="filter">
+                    <div id="days"><p class="filtr">New Arrived:</p><button onclick="arrived()">7 days</button><button onclick="arrived2()">15 Days</button><button onclick="arrived3()">30 Days</button></div>
+                   <div id="filter1"><p class="filtr">Filter:</p><select name="" id="country" onchange="filcountry()">
+                    <option value="Default">Ship From</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                    <option value="United_States">United States</option>
+                    <option value="United_Kingdom">United Kingdom</option>
+                    <option value="Netherland">Netherland</option>
+                    <option value="China">China</option>
+                   </select>
+                   <input type="checkbox" id="sale" onchange="funsale()"><label for="" >On sale</label>
+                   <input type="checkbox" id="ship" onchange="funship()"><label for="">Free Shipping</label>
+                   <p class="filtr">Price</p>
+                   <input type="number" id="min" placeholder="Min" oninput="showfun()">
+                   <h5>-</h5>
+                   <input type="number" id="max" placeholder="Max" oninput="showfun()">
+                  <div id="btn"></div>
+                   </div>
+                    <div id="sort"><p class="filtr">Sort:</p><button onclick="bstmtch()">Best Match</button><button onclick="nwarvl()">New Arrival</button><button onclick="prc()">Price</button></div>
+                </div>
+                <div id="item">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer_part1"></div>
+    <div id="footer_part2"></div>
+</body>
+</html>
+
+<script type="module" src="./scripts/bestseller.js"></script>
+
+<script>
+    let data = JSON.parse(localStorage.getItem("BestSeller"))
+
+append(data)
+
+
+
+
+function append(data){
+    let parent = document.querySelector("#item");
+    console.log(data)
+    parent.innerHTML="";
+
+    data.forEach((el)=>{
+        let div = document.createElement('div');
+        div.addEventListener("click",function(){
+            detail(el);
+        })
+
+        let img = document.createElement('img');
+        img.src = el.imgURL;
+   
+        let name = document.createElement('p');
+        name.innerText = el.name;
+   
+        let price = document.createElement('h3');
+        price.innerText = el.price;
+   
+        let discount = document.createElement('h6');
+        if(el.off==undefined){
+           discount.innerText="";
+        }
+        else{
+           let text = el.cutoff+" "+el.off;
+           discount.innerText = text;
+        }
+   
+        let div2 = document.createElement("div");
+        div2.setAttribute("class","logo")
+   
+        let img2 = document.createElement('img');
+        img2.setAttribute("id","logoimg")
+        img2.src = "https://as2.ftcdn.net/v2/jpg/01/25/83/03/1000_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg"
+   
+        let wish = document.createElement('p');
+        wish.innerText = el.wishlist;
+
+        div2.append(img2, wish)
+   
+      div.append(img,name,price,discount,div2);
+   
+      parent.append(div)
+
+     
+     
+
+    })
+
+
+}
+
+function detail(data){
+
+
+    let bag = "";
+    for(let i=1;i<data.price.length;i++){
+        bag+=data.price[i]
+    }
+    let x = Number(bag)
+
+    let bag2 = "";
+    for(let i=0;i<data.name.length;i++){
+        if(data.name[i]==" "){
+            break;
+        }
+        bag2+=data.name[i];
+    }
+
+    let obj ={
+        title: data.name,
+        description:data.description,
+        price:x,
+        rating:data.ratings,
+        image:data.imgURL,
+        quantity:1,
+        item_code:Math.floor((Math.random() * 999999) + 1),
+        brand: bag2,
+        country:data.country
+
+
+    }
+console.log(obj)
+    localStorage.setItem("Item_Details",JSON.stringify(obj))
+    window.location.href="product_detail.html"
+}
+
+
+
+function filcountry(){
+
+    console.log("hi")
+
+    let query = document.querySelector("#country").value;
+    console.log(query)
+
+if(query=="Default"){
+    let newdata = data;
+    append(newdata)
+}
+else{
+    let newdata = data.filter(function(el){
+        if(el.country==query){
+            return el;
+        }
+    })
+ append(newdata)
+
+}
+}
+function showfun(){
+    let btn = document.querySelector("#btn")
+    btn.innerHTML=`<button onclick="minmax()">OK</button>`   
+}
+
+
+let ar7=0;
+function arrived(){
+    ar7++;
+   if(ar7%2!=0){
+    let newdata = data.filter(function(el){
+        if(el.arrived=="7"){
+            return el;
+        }
+    })
+    append(newdata)
+   }
+else{
+    let newdata=data;
+    append(newdata)
+}
+    
+}
+
+let ar15=0;
+function arrived2(){
+    ar15++;
+   if(ar15%2!=0){
+    let newdata = data.filter(function(el){
+        if(el.arrived=="15"){
+            return el;
+        }
+    })
+    append(newdata)
+   }
+   else{
+    let newdata=data;
+    append(newdata)
+}
+}
+
+let ar30=0;
+function arrived3(){
+    ar30++;
+    if(ar30%2!=0){
+        let newdata = data.filter(function(el){
+            if(el.arrived=="30"){
+                return el;
+            }
+        })
+        append(newdata)
+    }
+    else{
+        let newdata=data;
+        append(newdata)
+    }
+}
+
+function funsale(){
+let sale = document.querySelector("#sale");
+
+if(sale.checked){
+    newdata = data.filter(function(el){
+        if(el.sale=="yes"){
+            return el;
+        }
+    })
+
+    append(newdata)
+}
+else{
+    let newdata=data;
+    append(newdata)
+}
+
+}
+
+
+function funship(){
+    let ship = document.querySelector("#ship");
+    
+    if(ship.checked){
+        let newdata = data.filter(function(el){
+            if(el.shipping=="yes"){
+                return el;
+            }
+        })
+    
+        append(newdata)
+    }
+    else{
+        newdata=data;
+        append(newdata)
+    }
+    
+    }
+
+
+    function minmax(){
+
+    let min = document.getElementById('min').value;
+    let max = document.getElementById('max').value;
+    console.log(min,max)
+
+    if(min=="" || max==""){
+        alert("Enter the correct Min and Max values")
+    }
+    else{
+        let newdata = data.filter(function(el){
+            
+            let bag = "";
+            for(let i=1;i<el.price.length;i++){
+                bag+=el.price[i]
+            }
+            let x = Number(bag);
+            if(x>=min && x<=max){
+                return el;
+            }
+
+        })
+        append(newdata)
+    }
+
+    }
+
+    function bstmtch(){
+        console.log("hi")
+      let newdata = data.sort(function(a,b){
+       let x = Number(a.wishlist)
+       let y = Number(b.wishlist)
+        return y-x;
+      })
+
+     append(newdata)
+    }
+
+    function nwarvl(){
+        let newdata = data.sort(function(a,b){
+            let x = Number(a.ratings)
+            let y = Number(b.ratings)
+             return x-y;
+           })
+     
+          append(newdata)
+
+
+    }
+
+    let prccnt=0;
+
+    function prc(){
+        prccnt++;
+        let newdata = data.sort(function(a,b){
+            let bag = "";
+    for(let i=1;i<a.price.length;i++){
+        bag+=a.price[i]
+    }
+    let x = Number(bag)
+    let bag2 = "";
+    for(let i=1;i<b.price.length;i++){
+        bag2+=b.price[i]
+    }
+    let y = Number(bag2)
+
+            if(prccnt%2!==0){
+                return x-y;
+            }
+            else{
+                return y-x;
+            }
+
+           })
+     
+          append(newdata)
+
+
+    }
+
+
+</script>
+
