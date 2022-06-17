@@ -3,6 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
+#number{
+    font-size: 16px;
+    padding-top: 2px;
+}
 #navbar{
     margin-bottom: 20px;
 }
@@ -11,7 +15,7 @@
     /* border: 1px solid black; */
     margin-top: 10px;
 }
-#title{
+#title,#price{
     font-size: 22px;
 }
 #small>p{
@@ -88,6 +92,9 @@
 #qty_button>p:nth-child(2){
     /* border: 0px; */
     width: 60px;
+}
+#payment>p{
+    margin-top: 5px;
 }
 #payment>img{
     width: 70px;
@@ -221,6 +228,5 @@ border-bottom: 1px solid rgb(228, 222, 222);
 color: rgb(167, 161, 161);
 }
 #plus,#minus{
-    font-weight: bold;
     font-size: 18px;
 }
