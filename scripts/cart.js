@@ -17,7 +17,7 @@ let selectedProduct = JSON.parse(localStorage.getItem('selected_product')) || {
   itemNums: 0,
 };
 let ttl_itm = document.querySelector('.ttl_itm>b');
-let cuser = JSON.parse(localStorage.getItem('c_user')) || {name:'Randhir'};
+let cuser = JSON.parse(localStorage.getItem('c_user')) || {};
 let chsed_item = document.querySelector('.chsed_item>b');
 chsed_item.innerText = selectedProduct.itemNums;
 ttl_itm.innerText = `$ ${selectedProduct.price}`;
@@ -158,8 +158,7 @@ let remove = (el, index) => {
 // Progress Bar functionality
 nextBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    formStepsNum++;
-    if (formStepsNum == 1) {
+    if (formStepsNum == 0) {
       if (!cuser.name) {
         window.location.href = 'signup.html';
       } else if (selectedProduct.itemNums > 0) {
@@ -172,6 +171,7 @@ nextBtns.forEach((btn) => {
       updateFormSteps();
       updateProgressbar();
     }
+    formStepsNum++; //
   });
 });
 prevBtns.forEach((btn) => {
@@ -213,6 +213,7 @@ checkoutBtn.addEventListener('click', () => {
   checkout();
 });
 var checkout = () => {
+  event.preventDefault();
   alert('Purchase has been done successfully');
   cartData.forEach((el, index) => {
     if (el.checked == true) {
@@ -222,5 +223,6 @@ var checkout = () => {
   selectedProduct = { price: 0, itemNums: 0 };
   localStorage.setItem('selected_product', JSON.stringify(selectedProduct));
   localStorage.setItem('cart_data', JSON.stringify(cartData));
+  console.log('Hello');
+  window.location.href = 'index.html';
 };
-
