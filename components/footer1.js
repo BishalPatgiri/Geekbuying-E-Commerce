@@ -1,5 +1,6 @@
 let exportF1=()=>{
-    return `<section id="strip_one">
+    return `<hr id="divider_footer">
+    <section id="strip_one">
     <h2>Why buy from geekbuying?</h2>
     <h2>+</h2>
 </section>
