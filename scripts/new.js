@@ -96,7 +96,7 @@ function detail(data){
     let obj ={
         title: data.name,
         description:data.description,
-        price:x,
+        price:Math.floor(x),
         rating:data.ratings,
         image:data.imgURL,
         quantity:1,

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Cart</title>
+  </head>
+  <body>
+    <div class="head">
+      <div class="head-content">
+        <div class="left-area">
+          <div class="shop_icon">
+            <a href="index.html" class="shop_img"></a>
+          </div>
+          <span class="shop_secure">Secure Checkout </span>
+        </div>
+        <!-- progressbar -->
+        <div class="progress-section">
+          <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step active" data-title="Cart"></div>
+            <div class="progress-step" data-title="Place Order"></div>
+            <div class="progress-step" data-title="Pay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="#" class="form">
+      <!-- Product Name and Details -->
+      <div class="form-step active">
+        <div class="shop_content">
+          <span class="fw-bold">Product Name & Details</span>
+          <span class="currency">
+            <p>Ship to</p>
+            <img src="./images/flag.png" alt="" /> <span>/ INR</span></span
+          >
+
+          <div class="shop-product">
+            <table cellspacing="0" cellpadding="0">
+              <thead>
+                <tr class="shop_head">
+                  <td style="width: 580px; text-indent: 20px">
+                    Product Name &amp; Detail
+                  </td>
+                  <td style="width: 120px" class="cen">Unit Price</td>
+                  <td style="width: 150px" class="cen">Quantity</td>
+                  <td style="width: 160px" class="cen">Total</td>
+                  <td style="width: 120px" class="cen">Operation</td>
+                </tr>
+              </thead>
+              <tbody class="cartitemList" id="cartitemList">
+                <!-- <tr class="shop_warehouse">
+                  <td class="prd-dtls">
+                    <input class="with-10" type="checkbox" />
+
+                    <img
+                      src="https://img.gkbcdn.com/p/2022-06-07/Creality-Smart-Kit-2-0-with-8G-TF-Card-501574-0._w280_.jpg"
+                      alt="product"
+                    />
+                    <p>
+                      Creality Smart Kit 2.0 Wifi Box, Cloud Slice, Cloud
+                      Printing, WiFi Box , 1080P Web Camera, Remote Control
+                    </p>
+                  </td>
+                  <td class="shop_table_price"><span>₹ 5000</span></td>
+                  <td class="qwt">
+                    <i class="icon">-</i>
+                    <input type="text" value="2" />
+                    <i class="icon">+</i>
+                  </td>
+                  <td class="shop_table_tprice"><span>₹ 5000</span></td>
+                  <td class="shop_table_iconxin">
+                    <i>Whishlist</i>
+                    <em>Delete</em>
+                  </td>
+                </tr>
+                -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="checkout_section">
+          <span class="cnt_shping"
+            >Continue shoping <i class="arrow right"></i
+          ></span>
+          <div class="left-checkout-area">
+            <span class="chsed_item">You Choose <b>0</b> items</span>
+            <span class="ttl_itm">Total : <b>₹ 0.00</b></span>
+            <button class="paybtn">
+              <img
+                src="https://content1.geekbuying.com/V1.4/en/images/cartImg/new_pp.png"
+                alt=""
+              />
+            </button>
+            <a href="#" class="btn btn-next with-20 ml-auto"
+              >Proceed to Checkout</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="form-step border">
+        <span class="fw-bold m-10">Shipping Address</span>
+        <div class="input-group">
+          <label for="Phone"><span class="require">*</span>First Name:</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="Phone"><span class="require">*</span>Last Name:</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="Phone"
+            ><span class="require">*</span>Country/Region:</label
+          >
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="Phone"><span class="require">*</span>Phone</label>
+          <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="email"><span class="require">*</span>Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-pre">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="input-group">
+          <label for="cpassword">Confirm Password</label>
+          <input type="password" name="cpassword" id="cpassword" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-pre">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+    <footer id="footer_part2"></footer>
+  </body>
+  <script  type="module" src="./scripts/cart.js"></script>
+</html>
