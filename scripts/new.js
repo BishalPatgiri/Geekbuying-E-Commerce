@@ -327,10 +327,7 @@ function funship(){
     }
 
 
-
-
-    ///
-    //Searchbox Categories Container.
+//Searchbox Categories Container.
 let searchbox=document.querySelector("#category_dropdown_Sbox");
 searchbox.addEventListener("mouseover",()=>{
     displayCategories();
@@ -345,7 +342,6 @@ searchbox_container.addEventListener("mouseout",()=>{
 let hideCategories=()=>{
     searchbox_container.style.display="none";
 }
-//Sign In Icon Dropdown starts here.
 let dropdown=document.querySelector(".dropdown");
 dropdown.addEventListener("mouseover",()=>{
     showContent();
@@ -362,28 +358,63 @@ let hideContent=()=>{
     let content=document.querySelector(".dropdown_content");
     content.style.display="none";
 }
-let sign_in=document.querySelector(".sign_in");
-sign_in.addEventListener("mouseover",()=>{
-    showSignIn();
-})
-let showSignIn=()=>{
-    let signIn_div=document.querySelector(".signin_dropdown_content");
-    signIn_div.style.display="block";
+
+//Sign In Icon Dropdown starts here.
+let cuser=JSON.parse(localStorage.getItem("c_user"))||[];
+if(cuser.length===0){
+    let sign_in=document.querySelector(".sign_in");
+    sign_in.addEventListener("mouseover",()=>{
+         showSignIn();
+    })
+    let showSignIn=()=>{
+        let signIn_div=document.querySelector(".signin_dropdown_content");
+        signIn_div.style.display="block";
+    }
+    let signIndiv=document.querySelector(".signin_dropdown_content");
+    signIndiv.addEventListener("mouseout",()=>{
+        hideSignIn();
+    })
+    let hideSignIn=()=>{
+        let signIn_div=document.querySelector(".signin_dropdown_content");
+        signIn_div.style.display="none";
+        //Sign In ends here.
+    }
 }
-let signIndiv=document.querySelector(".signin_dropdown_content");
-signIndiv.addEventListener("mouseout",()=>{
-    hideSignIn();
-})
-let hideSignIn=()=>{
-    let signIn_div=document.querySelector(".signin_dropdown_content");
-    signIn_div.style.display="none";
+else{
+    //Sign out starts here.
+    let dropdown2=document.querySelector(".sign_in");
+    dropdown2.addEventListener("mouseover",()=>{
+        displaySignOutdiv()
+    });
+    let displaySignOutdiv=()=>{
+        let content=document.querySelector(".signout_dropdown_content")
+        content.style.display="block";
+    }
+    let dropdown2_content=document.querySelector(".signout_dropdown_content");
+    dropdown2_content.addEventListener("mouseout",()=>{
+        hideSignOutdiv()
+    });
+    let hideSignOutdiv=()=>{
+        let content=document.querySelector(".signout_dropdown_content")
+        content.style.display="none"; 
+    }
+
+    let span_signin=document.querySelector(".sign_in>p");
+    // console.log(cuser);
+    span_signin.innerText=`Hello,${cuser[0].name}`;
+
+    //Signout functionality.
+    let signout_p=document.querySelector("#sign_out");
+    signout_p.addEventListener("click",()=>{
+        deleteCUser();
+    })
+    let deleteCUser=()=>{
+        cuser=[];
+        localStorage.setItem("c_user",JSON.stringify(cuser));
+        localStorage.setItem("cart_data",JSON.stringify([]));
+        window.location.reload();
+    }
 }
-//Sign In ends here.
-
-//Sign out starts here.
-
-
-
 //Hamburger Dropdown Starts here.
 
 let hamburger_dropdown1=document.querySelector(".first>#warehouse");
@@ -601,3 +632,14 @@ let appendSubcat1=()=>{
     container.append(subcategory,subcategory2,dropdown_div);
 };
 //Hamburger Dropdown ends here.
+
+//Increment of Count in red-circle.
+let cartData=JSON.parse(localStorage.getItem("cart_data"))||[];
+let red_circle_cart=document.querySelector(".red_circle");
+let total_count=0;
+cartData.forEach((elem) => {
+    total_count+=elem.quantity;
+});
+red_circle_cart.innerText=total_count;
+
+ 

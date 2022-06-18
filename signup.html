@@ -34,7 +34,7 @@
 
 <script>
     var ar = JSON.parse(localStorage.getItem("user"))
-
+    let cuser=[];
 
     function mp()
     {
@@ -62,8 +62,8 @@
             {
                 if(b.value==ar[i].email && c.value==ar[i].pass)
                 {
-                    
-                    localStorage.setItem("c_user",JSON.stringify(ar[i]))
+                    cuser.push(ar[i]);
+                    localStorage.setItem("c_user",JSON.stringify(cuser));
                     alert("Sign In Successful")
                     zz++
                     window.open("index.html","_self")

@@ -83,8 +83,8 @@ let exportNav=()=>{
                             <p>Welcome to Geekbuying</p>
                         </div>
                         <div id="buttons">
-                            <button class="join">Join</button>
-                            <button class="signin">Sign In</button>
+                            <a href="createacc.html" class="join">Join</a>
+                            <a href="signup.html" class="signin">Sign In</a>
                         </div>
                         <span id="separator_dropdown">
                             <hr>
@@ -105,9 +105,7 @@ let exportNav=()=>{
                         <br>
                         <p>My Profile</p>
                         <br>
-                        <div>
-                            <a href="#"><p>Sign out</p></a>
-                        </div>
+                        <p id="sign_out">Sign out</p>
                         <br>
                     </div>
                 </span>
