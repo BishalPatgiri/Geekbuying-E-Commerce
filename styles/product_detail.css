@@ -239,3 +239,38 @@ color: rgb(167, 161, 161);
 #plus,#minus{
     font-size: 18px;
 }
+#show_offer{
+    margin-top: 10px;
+    display: none;
+}
+#show_offer>h2{
+    font-size: 17px;
+}
+#show_offer>div{
+    width: 55%;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(61, 147, 240);
+}
+#show_offer>div>div{
+    background-color: rgb(209, 220, 254);
+    padding: 10px;
+    border-radius: 10px;
+}
+#show_offer>div>div>p:nth-child(1){
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: rgb(117, 115, 112);
+}
+#show_offer button{
+    margin-top: 10px;
+    border: 0px;
+    background-color: rgb(27, 85, 202);
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}

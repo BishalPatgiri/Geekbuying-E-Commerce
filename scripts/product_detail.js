@@ -422,3 +422,18 @@ let appendSubcat1 = () => {
   dropdown_div.append(dropdown_img);
   container.append(subcategory, subcategory2, dropdown_div);
 };
+
+
+/////////
+document.getElementById("hov").addEventListener("mouseover",offdikha)
+
+function offdikha(){
+    document.getElementById("show_offer").style.display="block"
+}
+
+document.getElementById("hov").addEventListener("mouseout",offnadikha)
+
+function offnadikha(){
+    document.getElementById("show_offer").style.display="none"
+}
+
