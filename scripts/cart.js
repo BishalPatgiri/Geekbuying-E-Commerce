@@ -1,5 +1,5 @@
-//import 
-import exportF2 from '../components/footer2.js'
+//import
+import exportF2 from '../components/footer2.js';
 let footer2 = document.querySelector('#footer_part2');
 footer2.innerHTML = exportF2();
 
@@ -17,6 +17,7 @@ let selectedProduct = JSON.parse(localStorage.getItem('selected_product')) || {
   itemNums: 0,
 };
 let ttl_itm = document.querySelector('.ttl_itm>b');
+let cuser = JSON.parse(localStorage.getItem('c_user')) || {name:'Randhir'};
 let chsed_item = document.querySelector('.chsed_item>b');
 chsed_item.innerText = selectedProduct.itemNums;
 ttl_itm.innerText = `$ ${selectedProduct.price}`;
@@ -75,14 +76,14 @@ function display(data) {
     td4.append(tPrice);
     let td5 = document.createElement('td');
     td5.classList = 'shop_table_iconxin';
-    let whislist = document.createElement('i');
-    whislist.innerText = 'Whislist';
+    let wishlist = document.createElement('i');
+    wishlist.innerText = 'Wish list';
     let rm = document.createElement('em');
     rm.innerText = 'Delete';
     rm.addEventListener('click', () => {
       remove(el, index);
     });
-    td5.append(whislist, rm);
+    td5.append(wishlist, rm);
 
     row.append(td1, td2, td3, td4, td5);
     parent.append(row);
@@ -114,7 +115,7 @@ let increment = (el, qwtData, tPrice, id) => {
   tPrice.innerText = `$ ${Math.floor(el.price * el.quantity)}`;
   // console.log(el.checked)
   if (el.checked) {
-    selectedProduct.price += Number(el.price);
+    selectedProduct.price += Math.floor(el.price);
     selectedProduct.itemNums++;
     chsed_item.innerText = selectedProduct.itemNums;
     ttl_itm.innerText = `$ ${selectedProduct.price}`;
@@ -130,9 +131,9 @@ let decrement = (el, qwtData, tPrice, id) => {
     qwtData.value = el.quantity;
     tPrice.innerText = `$ ${Math.floor(el.price * el.quantity)}`;
     if (el.checked) {
-      selectedProduct.price -= Number(el.price);
+      selectedProduct.price -= Math.floor(el.price);
       selectedProduct.itemNums--;
-      ttl_itm.innerText =(`$ ${selectedProduct.price}`);
+      ttl_itm.innerText = `$ ${selectedProduct.price}`;
       chsed_item.innerText = selectedProduct.itemNums;
       // console.log(selectedProduct.price)
       localStorage.setItem('selected_product', JSON.stringify(selectedProduct));
@@ -158,8 +159,19 @@ let remove = (el, index) => {
 nextBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     formStepsNum++;
-    updateFormSteps();
-    updateProgressbar();
+    if (formStepsNum == 1) {
+      if (!cuser.name) {
+        window.location.href = 'signup.html';
+      } else if (selectedProduct.itemNums > 0) {
+        updateFormSteps();
+        updateProgressbar();
+      } else {
+        alert('Please select an item.');
+      }
+    } else {
+      updateFormSteps();
+      updateProgressbar();
+    }
   });
 });
 prevBtns.forEach((btn) => {
@@ -193,3 +205,22 @@ function updateProgressbar() {
 
   progress.style.width = barLength == '0%' ? '24%' : barLength;
 }
+
+// Checkout function
+
+let checkoutBtn = document.querySelector('#checkout');
+checkoutBtn.addEventListener('click', () => {
+  checkout();
+});
+var checkout = () => {
+  alert('Purchase has been done successfully');
+  cartData.forEach((el, index) => {
+    if (el.checked == true) {
+      cartData.splice(index, 1);
+    }
+  });
+  selectedProduct = { price: 0, itemNums: 0 };
+  localStorage.setItem('selected_product', JSON.stringify(selectedProduct));
+  localStorage.setItem('cart_data', JSON.stringify(cartData));
+};
+

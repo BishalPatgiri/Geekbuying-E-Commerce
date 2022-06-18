@@ -12,7 +12,7 @@
   font-family: 'Open Sans', sans-serif !important;
 }
 
-body {
+.cart_container {
   display: grid;
   place-items: center;
   background-color: #fff;
@@ -74,7 +74,7 @@ body {
   margin: 1rem 5rem;
   display: flex;
   /* border: 1px solid #ccc; */
-  width: 50%;
+  width: 100%;
 }
 .m-10 {
   margin: 10px 0;
@@ -102,6 +102,14 @@ body {
   width: 50%;
   border: 1px solid #ccc;
   outline: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.25rem;
+}
+.input-group > select {
+  width: 50%;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #333;
   padding: 0.6rem 1rem;
   border-radius: 0.25rem;
 }
@@ -178,7 +186,6 @@ body {
 .btn {
   padding: 0.86rem 0.9rem;
   display: block;
-  width: 50%;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
@@ -187,7 +194,6 @@ body {
   border-radius: 0.25rem;
   cursor: pointer;
   transition: all 250ms ease-in-out;
-  margin-right: 10px;
 }
 .paybtn {
   width: auto;
@@ -211,17 +217,18 @@ body {
 }
 
 .btns-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-content: space-between;
-  width: 100%;
+  display: flex;
+  margin: 5px auto;
+  gap: 12rem;
+  justify-content: end;
+  width: 60%;
 }
 
 .form-step {
   display: none;
   transform-origin: top;
   animation: animate 0.5s;
+  margin-bottom: 80px;
 }
 @keyframes animate {
   from {
@@ -370,8 +377,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 0.5rem;
 }
-
+.checkout_section>a{
+  text-decoration: none;
+  color:#333;
+}
 .left-checkout-area {
   display: flex;
   align-items: center;
@@ -380,7 +391,7 @@ body {
 
 .cnt_shping {
   font-size: 14px;
-  margin: 0 0 0 10px;
+  /* margin: 0 0 0 10px; */
 }
 
 .chsed_item {
@@ -421,4 +432,9 @@ body {
 
 footer {
   width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.with-500 {
+  height: 500px;
 }

@@ -21,7 +21,7 @@ let exportNav=()=>{
     </section>
     <section id="middle_strip">
         <sub class="brand_logo">
-            <img src="./images/brand_logo-2.png" alt="brand_logo">
+            <a href="index.html"><img src="./images/brand_logo-2.png" alt="brand_logo"></a>
         </sub>
         <sub class="search_box">
             <div class="search_category">
@@ -115,7 +115,7 @@ let exportNav=()=>{
             </div>
             <div class="cart_icon">
                 <div class="cart_icon_img">
-                    <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/cart.png" alt="cart_icon">
+                    <a href="cart.html" ><img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/cart.png" alt="cart_icon"></a>
                 </div>
                 <span class="red_circle">0</span>
             </div>
@@ -185,8 +185,8 @@ let exportNav=()=>{
                     <h3>Categories</h3>
                 </div>   
             </div>
-            <div> <a href="#"><h3>New</h3></a></div>
-            <div> <a href="#"><h3>Bestselling</h3></a></div>
+            <div> <a href="new.html"><h3>New</h3></a></div>
+            <div> <a href="bestseller.html"><h3>Bestselling</h3></a></div>
             <div> <a href="#"><h3>Brand</h3></a></div>
             <div> <a href="#"><h3>Clearance</h3></a></div>
             <div> <a href="#"><h3>Deals</h3></a></div>

@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/cart.css" />
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>Cart</title>
   </head>
   <body>
+    <div class="cart_container">
     <div class="head">
       <div class="head-content">
         <div class="left-area">
@@ -83,9 +84,9 @@
           </div>
         </div>
         <div class="checkout_section">
-          <span class="cnt_shping"
+         <a href="new.html"> <span class="cnt_shping"
             >Continue shoping <i class="arrow right"></i
-          ></span>
+          ></span> </a>
           <div class="left-checkout-area">
             <span class="chsed_item">You Choose <b>0</b> items</span>
             <span class="ttl_itm">Total : <b>₹ 0.00</b></span>
@@ -102,7 +103,7 @@
         </div>
       </div>
 
-      <div class="form-step border">
+      <div  class="form-step border with-500">
         <span class="fw-bold m-10">Shipping Address</span>
         <div class="input-group">
           <label for="Phone"><span class="require">*</span>First Name:</label>
@@ -119,8 +120,12 @@
           <input type="text" name="phone" id="phone" />
         </div>
         <div class="input-group">
-          <label for="Phone"><span class="require">*</span>Phone</label>
+          <label for="Phone"><span class="require">*</span>Full Address:</label>
           <input type="text" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+          <label for="Phone"><span class="require">*</span>Phone</label>
+          <input type="text" name="number" id="phone" />
         </div>
         <div class="input-group">
           <label for="email"><span class="require">*</span>Email</label>
@@ -128,26 +133,28 @@
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-pre">Previous</a>
-          <a href="#" class="btn btn-next">Next</a>
+          <a href="#" class="btn btn-next">Proceed</a>
         </div>
       </div>
 
       <div class="form-step">
         <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <label for="password">Payment Mode</label>
+          <select name="payment_mode" id="payment_mode">
+            <option value="null">Select</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
         </div>
-        <div class="input-group">
-          <label for="cpassword">Confirm Password</label>
-          <input type="password" name="cpassword" id="cpassword" />
-        </div>
+        
         <div class="btns-group">
           <a href="#" class="btn btn-pre">Previous</a>
-          <input type="submit" value="Submit" class="btn" />
+          <input type="submit" id="checkout" value="Checkout" class="btn" />
         </div>
       </div>
     </form>
     <footer id="footer_part2"></footer>
+  </div>
   </body>
-  <script  type="module" src="./scripts/cart.js"></script>
+  <script type="module" src="./scripts/cart.js"></script>
 </html>
