@@ -459,3 +459,17 @@ cartdata.forEach((elem) => {
     total_count+=elem.quantity;
 });
 red_circle_cart.innerText=total_count;
+
+/////hover on offer
+document.getElementById("hov").addEventListener("mouseover",show_off)
+document.getElementById("show_offer").addEventListener("mouseover",show_off)
+
+function show_off(){
+    document.getElementById("show_offer").style.display="block"
+}
+
+document.getElementById("show_offer").addEventListener("mouseout",dnt_show_off)
+
+function dnt_show_off(){
+    document.getElementById("show_offer").style.display="none"
+}
