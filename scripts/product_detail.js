@@ -46,10 +46,10 @@ document.getElementById('number').innerText = `${input.quantity}`;
 document.getElementById('from_country').innerText = `${input.country}`;
 input.rating = 5;
 
-document.getElementById('btn1').addEventListener('click', go_to_cart);
+document.getElementById('btn1').addEventListener('click', add_to_cart);
 document.getElementById('btn2').addEventListener('click', go_to_cart);
 
-function go_to_cart() {
+function add_to_cart() {
   let check = cartData.filter((el) => {
     return el.title == input.title;
   });
@@ -58,11 +58,16 @@ function go_to_cart() {
     let array = JSON.parse(localStorage.getItem('cart_data')) || [];
     array.push(input);
     localStorage.setItem('cart_data', JSON.stringify(array));
-    window.location.href = 'cart.html';
+    window.location.reload();
   } else {
     alert('Item already exists in cart');
   }
 }
+
+function go_to_cart(){
+  window.location.href = 'cart.html';
+}
+
 
 ///////////////////////
 
@@ -417,3 +422,19 @@ let appendSubcat1 = () => {
   dropdown_div.append(dropdown_img);
   container.append(subcategory, subcategory2, dropdown_div);
 };
+
+
+/////////
+document.getElementById("hov").addEventListener("mouseover",offdikha)
+document.getElementById("show_offer").addEventListener("mouseover",offdikha)
+
+function offdikha(){
+    document.getElementById("show_offer").style.display="block"
+}
+
+document.getElementById("show_offer").addEventListener("mouseout",offnadikha)
+
+function offnadikha(){
+    document.getElementById("show_offer").style.display="none"
+}
+
