@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles/sign.css">
+</head>
+<body>
+    <div id="upperbar">
+        <img onclick="mp()" src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+    </div>
+    <div id="bgi">
+        <div id="signup">
+            <h3>Sign In</h3>
+            <input id="ea" type="text" placeholder="Email address">
+            <input id="pa" type="text" placeholder="Password">
+            <div id="fp">
+                <input id="cb" type="checkbox">
+                <p>Keep me signed in</p>
+                <img onclick="goog()" src="https://cdn.iconscout.com/icon/free/png-64/faqs-1895578-1604568.png" alt="">
+                <u>Forget your password?</u>
+            </div>
+            <button id="signb" onclick="signup()"><h4>Sign In</h4></button><br>
+            <button id="cna" onclick="cna()"><h4>Create a new account</h4></button>
+            <div id="fp"><hr><p>or</p><hr></div>
+            <img src="https://cdn.iconscout.com/icon/free/png-64/google-152-189813.png" alt="">
+        </div>
+    </div>
+    <p>Copyright © 2012 - 2022 GeekBuying.com. All rights reserved.</p>
+</body>
+</html>
+
+<script>
+    var ar = JSON.parse(localStorage.getItem("user"))
+
+
+    function mp()
+    {
+        window.open("index.html","_self")
+    }
+
+    function cna()
+    {
+        window.open("createacc.html","_self")
+    }
+
+    function signup()
+    {
+        var b = document.querySelector("#ea")
+        var c = document.querySelector("#pa")
+        var e = document.querySelector("#cb")
+        if(b.value=="" || c.value=="" || e.checked==false)
+        {
+            alert("fill all the input boxes..!!")
+        }
+        else if(ar)
+        {
+            var zz=0
+            for(var i = 0;i<ar.length;i++)
+            {
+                if(b.value==ar[i].email && c.value==ar[i].pass)
+                {
+                    
+                    localStorage.setItem("c_user",JSON.stringify(ar[i]))
+                    alert("Sign In Successful")
+                    zz++
+                    window.open("index.html","_self")
+                    break;
+                }
+            }
+            if(zz==0)
+            {
+                alert("Incorrect Email or Password")
+            }
+        }
+        else
+        {
+            alert("Incorrect Email or Password")
+        }
+        
+    }
+</script>

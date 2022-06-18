@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your account</title>
+    <link rel="stylesheet" href="styles/sign.css">
+</head>
+<body>
+    <div id="upperbar">
+        <img onclick="mp()" src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+    </div>
+    <div id="bgi">
+        <div id="signup">
+            <div id="cya">
+                <h3>Create your account</h3>
+                <p onclick="os()">Sign In</p>
+            </div>
+            <input id="nn" type="text" placeholder="Nick name">
+            <input id="ea" type="text" placeholder="Email address">
+            <input id="pp" type="text" placeholder="Password">
+            <div id="capt">
+                <input id="captc" type="text" placeholder="Access code">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXMn-fZ4aOMfPdQoPWQKCSQFK_moom1sfcA&usqp=CAU" alt="">
+            </div>
+            <div id="tcp">
+                <input id="cb" type="checkbox">
+                <p>I agree to Geekbuying's <u>Terms of Use</u> & <u>Privacy Policy.</u></p>
+            </div>
+            <button id="cra" onclick="ca()"><h4>Create Account</h4></button><br>
+        </div>
+    </div>
+    <p>Copyright © 2012 - 2022 GeekBuying.com. All rights reserved.</p>
+</body>
+</html>
+
+<script>
+    var a = document.querySelector("#nn")
+    var b = document.querySelector("#ea")
+    var c = document.querySelector("#pp")
+    var d = document.querySelector("#captc")
+    var e = document.querySelector("#cb")
+    var ar = JSON.parse(localStorage.getItem("user")) || []
+
+    function mp()
+    {
+        window.open("index.html","_self")
+    }
+
+    function ca()
+    {
+        if(a.value=="" || b.value=="" || c.value=="" || d.value!="1738" || e.checked==false)
+        {
+            alert("fill all the input boxes correctly..!!")
+        }
+        else{
+            var arr=[]
+            var obj = {
+                name:a.value,
+                email:b.value,
+                pass:c.value
+            }
+            ar.push(obj)
+            localStorage.setItem("user",JSON.stringify(ar))
+            arr.push(obj)
+            localStorage.setItem("c_user",JSON.stringify(arr))
+            window.open("index.html","_self")
+        }
+    }
+
+    function os()
+    {
+        window.open("signup.html","_self")
+    }
+</script>

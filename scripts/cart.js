@@ -17,7 +17,7 @@ let selectedProduct = JSON.parse(localStorage.getItem('selected_product')) || {
   itemNums: 0,
 };
 let ttl_itm = document.querySelector('.ttl_itm>b');
-let cuser = JSON.parse(localStorage.getItem('c_user')) || {};
+let cuser = JSON.parse(localStorage.getItem('c_user')) || [];
 let chsed_item = document.querySelector('.chsed_item>b');
 chsed_item.innerText = selectedProduct.itemNums;
 ttl_itm.innerText = `$ ${selectedProduct.price}`;
@@ -159,7 +159,7 @@ let remove = (el, index) => {
 nextBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
     if (formStepsNum == 0) {
-      if (!cuser.name) {
+      if (cuser.length<1) {
         window.location.href = 'signup.html';
       } else if (selectedProduct.itemNums > 0) {
         updateFormSteps();
