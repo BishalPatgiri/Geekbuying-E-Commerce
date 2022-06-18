@@ -426,12 +426,13 @@ let appendSubcat1 = () => {
 
 /////////
 document.getElementById("hov").addEventListener("mouseover",offdikha)
+document.getElementById("show_offer").addEventListener("mouseover",offdikha)
 
 function offdikha(){
     document.getElementById("show_offer").style.display="block"
 }
 
-document.getElementById("hov").addEventListener("mouseout",offnadikha)
+document.getElementById("show_offer").addEventListener("mouseout",offnadikha)
 
 function offnadikha(){
     document.getElementById("show_offer").style.display="none"
