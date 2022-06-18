@@ -1,5 +1,5 @@
 import exportNav from '../components/nav.js';
-let body=document.querySelector("body");
+let body=document.querySelector("#navbar");
 body.innerHTML=exportNav();
 
 //Searchbox Categories Container.
