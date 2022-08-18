@@ -1,15 +1,17 @@
-<a href="#"><img  width="100%" height="auto" src="https://gizchina.it/wp-content/uploads/2017/11/Geekbuying-logo.jpg" height="175px"/></a>
+<h1 align="center"><img src="https://gizchina.it/wp-content/uploads/2017/11/Geekbuying-logo.jpg" height="225px" width="350px"/></h1>
 
-<h1 align="center">Geekbuying.com</h1>
-
-<p> Geekbuying.com is an e-commerce website. From this website, you can buy electronics products
+<h2 align="left">Geekbuying.com</h2>
+<a href="https://www.geekbuying.com/">Main Website link </a>
+<br></br>
+<p> Geekbuying.com is an e-commerce website. From this website, we can buy electronics products that are usedc in our day today life. Developed this website along with a team of 5 members in one week. We have devided the whole website in 5 parts and divide the words accordingly.
 </p>
 <p> 
-Developed along with a team of 5 members in one week
+Here we mainly worked on providing the dynamic user interface. In this clone we have done most of the functionalities of the origin website along with that we have tried to design the laout as exact as possible.
 </p>
-<p> 
-Here we mainly worked on providing the dynamic user interface with some functionalities.
-</p>
-<p>My task in this project was to store the data of products in the backend and use that data to display all the available products on the product page.
-</p>
-<p>Tech stack: HTML, CSS, Javascript</p>
+<h2>Tech stack used in this projects are:</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
+</ul>
