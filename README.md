@@ -16,10 +16,12 @@ Here we mainly worked on providing the dynamic user interface. In this clone we 
 <li>Bootstrap</li>
 </ul>
 
-<h2>Different Sections of the website are looks like</h2>
+<h2>Different Sections of the website looks like as follows</h2>
 <li>Homepage</li>
+<p></p>
 <img src="https://user-images.githubusercontent.com/103960628/201537925-e145ca3b-6b69-449a-a3b4-549577dbbe38.png" alt="homepage"/>
 
 <li>Sign-in Page</li>
+<p></p>
 <img src="https://user-images.githubusercontent.com/103960628/201538055-725ee762-15e0-42b5-b501-6104da4109e7.png" alt="signin"/>
 
