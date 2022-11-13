@@ -15,6 +15,7 @@ Here we mainly worked on providing the dynamic user interface. In this clone we 
 <li>JavaScript</li>
 <li>Bootstrap</li>
 </ul>
+
 <h2>Different Sections of the website are looks like</h2>
-![Screenshot (1500)](https://user-images.githubusercontent.com/103960628/201537925-e145ca3b-6b69-449a-a3b4-549577dbbe38.png)
+<img src="https://user-images.githubusercontent.com/103960628/201537925-e145ca3b-6b69-449a-a3b4-549577dbbe38.png" alt="homepage"/>
 
