@@ -27,6 +27,6 @@ Here we mainly worked on providing the dynamic user interface. In this clone we 
 
 <li>Product Page</li>
 <p></p>
-![Screenshot (1535)](https://user-images.githubusercontent.com/103960628/208845266-66b9d296-45da-4b8d-823c-63523487c168.png)
+![Screenshot (1535)](https://user-images.githubusercontent.com/103960628/208845523-14afb105-4b1d-4a28-8cb2-28f27dfff52e.png)
 
 
