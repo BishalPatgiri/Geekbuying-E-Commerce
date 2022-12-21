@@ -25,3 +25,8 @@ Here we mainly worked on providing the dynamic user interface. In this clone we 
 <p></p>
 <img src="https://user-images.githubusercontent.com/103960628/201538055-725ee762-15e0-42b5-b501-6104da4109e7.png" alt="signin"/>
 
+<li>Product Page</li>
+<p></p>
+![Screenshot (1535)](https://user-images.githubusercontent.com/103960628/208845266-66b9d296-45da-4b8d-823c-63523487c168.png)
+
+
